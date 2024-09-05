@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+
+/* Basic reset and centering */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f7a07a, #ffbc77);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.command-section,
+.output-section,
+.post-request-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e65c4f;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome admin!</h1>
+        </header>
+        <main>
+            <section class="command-section">
+                <form action="{{ url_for('exec') }}" method="post">
+                    <textarea name="command" placeholder="Type your command here..."></textarea>
+                    <button type="submit">Execute Code</button>
+                </form>
+            </section>
+            <section class="output-section">
+                <h2>Command Output</h2>
+                <pre>{{ output }}</pre>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
