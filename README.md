@@ -1,6 +1,6 @@
 # vulnerable-labs
 
-This is a collection of source code with docker images to build vulnerable web applications made for exploitation. These "challenges" are made for beginners and showcase popular vectors of web attacks.
+This is a collection of source code with docker images to build vulnerable web applications made for exploitation. These "challenges" are made for beginners and showcase popular web attack vectors.
 
 Each lab has its own folder. To install these locally, you can first clone the repository :
 ![1](https://github.com/user-attachments/assets/49c356b9-380d-45ef-8c35-d669c0d7be7f)
@@ -15,3 +15,4 @@ Once done, you can exit out of the container and stop its execution :
 ![4](https://github.com/user-attachments/assets/e1998a94-0ace-4bb8-add9-32699db0256a)
 
 The --rm flag instanly removes it from the docker container list.
+All of the CSS and most of the HTML are AI-generated. 
